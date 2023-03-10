@@ -74,7 +74,7 @@ const formatUser = (title) => {
 //   return new Promise(function (resolve) {
 //     setTimeout(function () {
 //       const user = users.find(function (user) {
-//         return user.name === name
+//         return user.name == name
 //       })
 //       resolve(user)
 //     }, 2000)
@@ -83,7 +83,7 @@ const formatUser = (title) => {
 
 // Arrow Function without Promise
 // const findByName = (name) => {
-//   const user = users.find((user) => user.name === name)
+//   const user = users.find((user) => user.name == name)
 //   return user
 // }
 
@@ -91,7 +91,7 @@ const formatUser = (title) => {
 const findByName = (name) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const user = users.find((user) => user.name === name)
+      const user = users.find((user) => user.name == name)
       resolve(user)
     }, 2000)
   })
@@ -117,7 +117,7 @@ const findByName = (name) => {
 //   return new Promise(function (resolve) {
 //     setTimeout(function () {
 //       const filteredUsers = users.filter(function (user) {
-//         return user.major === major
+//         return user.major == major
 //       })
 //       resolve(filteredUsers)
 //     }, 4000)
@@ -126,7 +126,7 @@ const findByName = (name) => {
 
 // Arrow Function without Promise
 // const filterByMajor = (major) => {
-//   const filteredUsers = users.filter((user) => user.major === major)
+//   const filteredUsers = users.filter((user) => user.major == major)
 //   return filteredUsers
 // }
 
@@ -134,7 +134,7 @@ const findByName = (name) => {
 const filterByMajor = (major) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const filteredUsers = users.filter((user) => user.major === major)
+      const filteredUsers = users.filter((user) => user.major == major)
       resolve(filteredUsers)
     }, 4000)
   })
