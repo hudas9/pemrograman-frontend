@@ -2,7 +2,7 @@
  * TODO 2.
  * Import variable users dari file data/users.js
  */
-import users from "../data/users";
+import users from "../data/users"
 
 /**
  * SARAN TODO3 - TODO5.
@@ -19,31 +19,46 @@ import users from "../data/users";
  * - Gunakan promise untuk handle asynchronous.
  */
 
-// Without Promise
+// Old Function
+// function formatUser(title) {
+//   return new Promise(function (resolve) {
+//     setTimeout(function () {
+//       const formattedUsers = users.map(function (user) {
+//         return {
+//           ...user,
+//           name: `${title} ${user.name}`
+//         }
+//       })
+//       resolve(formattedUsers)
+//     }, 3000)
+//   })
+// }
+
+// Arrow Function without Promise
 // const formatUser = (title) => {
 //   const formattedUsers = users.map((user) => {
 //     return {
 //       ...user,
-//       name: `${title} ${user.name}`,
-//     };
-//   });
-//   return formattedUsers;
-// };
+//       name: `${title} ${user.name}`
+//     }
+//   })
+//   return formattedUsers
+// }
 
-// With Promise
+// Arrow Function with Promise
 const formatUser = (title) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       const formattedUsers = users.map((user) => {
         return {
           ...user,
-          name: `${title} ${user.name}`,
-        };
-      });
-      resolve(formattedUsers);
-    }, 3000);
-  });
-};
+          name: `${title} ${user.name}`
+        }
+      })
+      resolve(formattedUsers)
+    }, 3000)
+  })
+}
 
 /**
  * TODO 4.
@@ -54,21 +69,33 @@ const formatUser = (title) => {
  * - Gunakan promise untuk handle asynchronous.
  */
 
-// Without Promise
-// const findByName = (name) => {
-//   const user = users.find((user) => user.name === name);
-//   return user;
-// };
+// Old Function
+// function findByName(name) {
+//   return new Promise(function (resolve) {
+//     setTimeout(function () {
+//       const user = users.find(function (user) {
+//         return user.name === name
+//       })
+//       resolve(user)
+//     }, 2000)
+//   })
+// }
 
-// With Promise
+// Arrow Function without Promise
+// const findByName = (name) => {
+//   const user = users.find((user) => user.name === name)
+//   return user
+// }
+
+// Arrow Function with Promise
 const findByName = (name) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      const user = users.find((user) => user.name === name);
-      resolve(user);
-    }, 2000);
-  });
-};
+      const user = users.find((user) => user.name === name)
+      resolve(user)
+    }, 2000)
+  })
+}
 
 /**
  * SARAN TODO3 - TODO5.
@@ -85,24 +112,36 @@ const findByName = (name) => {
  * - Gunakan promise untuk handle asynchronous.
  */
 
-// Without Promise
-// const filterByMajor = (major) => {
-//   const filteredUsers = users.filter((user) => user.major === major);
-//   return filteredUsers;
-// };
+// Old Function
+// function filterByMajor(major) {
+//   return new Promise(function (resolve) {
+//     setTimeout(function () {
+//       const filteredUsers = users.filter(function (user) {
+//         return user.major === major
+//       })
+//       resolve(filteredUsers)
+//     }, 4000)
+//   })
+// }
 
-// With Promise
+// Arrow Function without Promise
+// const filterByMajor = (major) => {
+//   const filteredUsers = users.filter((user) => user.major === major)
+//   return filteredUsers
+// }
+
+// Arrow Function with Promise
 const filterByMajor = (major) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      const filteredUsers = users.filter((user) => user.major === major);
-      resolve(filteredUsers);
-    }, 4000);
-  });
-};
+      const filteredUsers = users.filter((user) => user.major === major)
+      resolve(filteredUsers)
+    }, 4000)
+  })
+}
 
 /**
  * TODO 6.
  * Export fungsi: formatUser, findByName, filterByMajor
  */
-export { formatUser, findByName, filterByMajor };
+export { formatUser, findByName, filterByMajor }
