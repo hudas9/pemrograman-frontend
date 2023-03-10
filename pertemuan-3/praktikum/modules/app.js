@@ -1,5 +1,5 @@
 // export function index, store
-import { index, store } from "./controller.mjs";
+import { index, store } from "./controller.js";
 
 function main() {
     const user = {
