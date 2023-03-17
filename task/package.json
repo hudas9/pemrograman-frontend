@@ -1,0 +1,14 @@
+{
+  "name": "task-pertemuan-2",
+  "version": "1.0.0",
+  "description": "Task Pertemuan 2",
+  "main": "task.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ahmad Huda Salam",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.4.3"
+  }
+}
