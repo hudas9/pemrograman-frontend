@@ -1,4 +1,4 @@
-import styles from "./Form.module.css"
+import styles from "./AddMovieForm.module.css"
 
 const Form = () => {
   return (
@@ -7,7 +7,7 @@ const Form = () => {
         <div className={styles.form__left}>
           <img
             className={styles.form__image}
-            src="https://picsum.photos/500/400"
+            src="https://picsum.photos/536/354"
             alt="cover" />
         </div>
         <div className={styles.form__right}>

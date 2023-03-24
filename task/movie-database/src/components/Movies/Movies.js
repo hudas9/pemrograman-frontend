@@ -70,6 +70,22 @@ const Movies = () => {
             <h3 className={styles.movie__title}>Title</h3>
             <p className={styles.movie__release}>2023</p>
           </div>
+          <div className={styles.movie}>
+            <img
+              className={styles.movie__image}
+              src="https://picsum.photos/300/400"
+              alt="cover" />
+            <h3 className={styles.movie__title}>Title</h3>
+            <p className={styles.movie__release}>2023</p>
+          </div>
+          <div className={styles.movie}>
+            <img
+              className={styles.movie__image}
+              src="https://picsum.photos/300/400"
+              alt="cover" />
+            <h3 className={styles.movie__title}>Title</h3>
+            <p className={styles.movie__release}>2023</p>
+          </div>
         </div>
       </section>
     </div>
