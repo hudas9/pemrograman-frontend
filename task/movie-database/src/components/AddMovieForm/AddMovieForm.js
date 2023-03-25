@@ -1,6 +1,6 @@
 import styles from "./AddMovieForm.module.css"
 
-const Form = () => {
+const AddMovieForm = () => {
   return (
     <div className={styles.container}>
       <section className={styles.form__container}>
@@ -25,4 +25,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default AddMovieForm

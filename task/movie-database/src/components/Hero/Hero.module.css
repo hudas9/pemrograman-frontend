@@ -52,7 +52,7 @@
   }
 
   .hero {
-    margin: 0 1rem;
+    padding: 1rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

@@ -9,7 +9,7 @@ const Navbar = () => {
             <a href="/">Movie App</a>
           </h1>
         </div>
-        <div>
+        <div className={styles.navbar__container}>
           <ul className={styles.navbar__list}>
             <li className={styles.navbar__item}>
               <a href="/">Home</a>
