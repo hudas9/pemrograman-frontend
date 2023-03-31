@@ -16,7 +16,7 @@ const Hero = () => {
           <img
             className={styles.hero__image}
             src="https://picsum.photos/536/354"
-            alt="cover" />
+            alt="poster" />
         </div>
       </section>
     </div>

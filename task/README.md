@@ -1,3 +1,2 @@
-# Task Pertemuan 5
-- Membuat component [Movies](movie-database/src/components/Movies)
-- Membuat component [addMovieForm](movie-database/src/components/AddMovieForm)
+# Task Pertemuan 6
+- Sama seperti [praktikum](../praktikum/movie-database/)

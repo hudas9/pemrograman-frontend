@@ -8,15 +8,19 @@ const AddMovieForm = () => {
           <img
             className={styles.form__image}
             src="https://picsum.photos/536/354"
-            alt="cover" />
+            alt="img" />
         </div>
         <div className={styles.form__right}>
           <h1 className={styles.form__title}>Add Movie</h1>
           <form className={styles.form}>
-            <label className={styles.form__label}>Title</label>
-            <input className={styles.form__input} type="text" />
-            <label className={styles.form__label}>Year</label>
-            <input className={styles.form__input} type="text" />
+            <div className={styles.form__group}>
+              <label className={styles.form__label}>Title</label>
+              <input className={styles.form__input} type="text" />
+            </div>
+            <div className={styles.form__group}>
+              <label className={styles.form__label}>Year</label>
+              <input className={styles.form__input} type="number" />
+            </div>
             <input className={styles.form__submit} type="submit" />
           </form>
         </div>

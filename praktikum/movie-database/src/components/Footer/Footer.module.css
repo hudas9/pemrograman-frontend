@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.footer {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .footer__title {
   margin-bottom: 1rem;
 }
@@ -12,6 +17,5 @@
 .footer__author>a {
   text-decoration: none;
   color: #fff;
-  font-weight: bolder;
-
+  font-weight: bold;
 }

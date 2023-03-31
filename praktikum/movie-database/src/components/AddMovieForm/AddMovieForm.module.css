@@ -22,19 +22,25 @@
   margin: auto;
 }
 
+.form__group {
+  margin-bottom: 1rem;
+}
+
 .form__label {
   display: block;
   text-align: left;
   color: #64748B;
-  margin-bottom: 0.5rem;
 }
 
 .form__input {
   width: 100%;
   padding: 0.5rem;
-  margin-bottom: 1rem;
   border: 1px solid #06D6A0;
   border-radius: 5px;
+}
+
+.form__input:focus {
+  outline: 1px solid #08c290;
 }
 
 .form__submit {

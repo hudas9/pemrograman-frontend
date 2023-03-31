@@ -38,6 +38,12 @@
   color: #fff;
 }
 
+.hero__button:hover {
+  background-color: #08c290;
+  color: #fff;
+  cursor: pointer;
+}
+
 .hero__image {
   max-width: 100%;
   height: auto;
@@ -52,7 +58,7 @@
   }
 
   .hero {
-    margin: 0 1rem;
+    padding: 1rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
