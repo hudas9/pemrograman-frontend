@@ -3,18 +3,25 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import Alert from "../Alert/Alert";
 
-const AddMovieForm = props => {
-  const { movies, setMovies } = props
+const AddMovieForm = (props) => {
+  const { movies, setMovies } = props;
+
   const [formData, setFormData] = useState({
     title: "",
     year: "",
     type: "",
     poster: "",
   });
-  const [alerts, setAlerts] = useState({});
+
+  const [alerts, setAlerts] = useState({
+    title: false,
+    year: false,
+    poster: false,
+  });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
@@ -23,6 +30,7 @@ const AddMovieForm = props => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const { title, year, type, poster } = formData;
     const newAlerts = {
       title: !title,
@@ -30,6 +38,7 @@ const AddMovieForm = props => {
       poster: !poster,
     };
     setAlerts(newAlerts);
+
     if (Object.values(newAlerts).every((alert) => !alert)) {
       const movie = {
         id: nanoid(9),
@@ -38,6 +47,7 @@ const AddMovieForm = props => {
         type,
         poster,
       };
+
       setMovies([...movies, movie]);
       setFormData({
         title: "",
@@ -55,14 +65,12 @@ const AddMovieForm = props => {
           <img
             className={styles.form__image}
             src="https://picsum.photos/536/354"
-            alt="cover" />
+            alt="cover"
+          />
         </div>
         <div className={styles.form__right}>
           <h1 className={styles.form__title}>Add Movie</h1>
-          <form
-            className={styles.form}
-            onSubmit={handleSubmit}
-          >
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.form__group}>
               <label className={styles.form__label}>Title</label>
               <input
@@ -116,7 +124,7 @@ const AddMovieForm = props => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default AddMovieForm
+export default AddMovieForm;

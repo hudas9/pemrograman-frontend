@@ -1,5 +1,5 @@
-import styles from "./Alert.module.css"
+import styles from "./Alert.module.css";
 
-const Alert = props => <p className={styles.alert}>{props.children}</p>
+const Alert = (props) => <p className={styles.alert}>{props.children}</p>;
 
-export default Alert
+export default Alert;
