@@ -38,12 +38,6 @@
   color: #fff;
 }
 
-.hero__button:hover {
-  background-color: #08c290;
-  color: #fff;
-  cursor: pointer;
-}
-
 .hero__image {
   max-width: 100%;
   height: auto;

@@ -1,5 +1,3 @@
-# Praktikum Pertemuan 5
-- Merefactor komponen [Movies](movie-database/src/components/Movies) menjadi komponen yang lebih kecil, [Movie](movie-database/src/components/Movie)
-- List dan Keys
-- Handling Event
-- Use State
+# Praktikum Pertemuan 7
+- Handle Form pada react, handleChange, handleSubmit
+- Lifting State

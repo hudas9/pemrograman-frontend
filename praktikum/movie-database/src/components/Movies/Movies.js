@@ -1,12 +1,9 @@
-import { useState } from "react"
 import { nanoid } from "nanoid"
 import styles from "./Movies.module.css"
 import Movie from "./../Movie/Movie"
-import data from "./../../utils/constants/data"
 
-const Movies = () => {
-
-  const [movies, setMovies] = useState(data)
+const Movies = (props) => {
+  const { movies, setMovies } = props
 
   const addMovie = () => {
     const movie = {
@@ -14,7 +11,7 @@ const Movies = () => {
       title: "Spiral Jigsaw",
       year: "2021",
       type: "movie",
-      poster: "https://picsum.photos/400/600"
+      poster: "https://picsum.photos/300/400"
     }
 
     setMovies([...movies, movie])
@@ -29,7 +26,7 @@ const Movies = () => {
             movies.map((movie) => <Movie key={movie.id} movie={movie} />)
           }
         </div>
-        <button className={styles.movies__button} onClick={addMovie}>Add Movie</button>
+        <button onClick={addMovie}>Add Movie</button>
       </section>
     </div>
   )

@@ -18,19 +18,6 @@
   flex-direction: column;
 }
 
-.movies__button {
-  padding: 0.8rem 1rem;
-  border: none;
-  border-radius: 10px;
-  background-color: #06D6A0;
-  color: #fff;
-}
-
-.movies__button:hover {
-  cursor: pointer;
-  background-color: #08c290;
-}
-
 /* Medium Screen */
 @media (min-width: 768px) {
   .movie__container {
