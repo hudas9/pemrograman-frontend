@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #f8f9fa;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.indonesia {
+  margin: 0 auto;
+}
+
+.indonesia__title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #06d6a0;
+}
+
+.indonesia__description {
+  font-size: 18px;
+  color: #118ab2;
+}
+
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.card__description {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.card:nth-child(1) .card__description {
+  color: #06d6a0;
+}
+
+.card:nth-child(2) .card__description {
+  color: #118ab2;
+}
+
+.card:nth-child(3) .card__description {
+  color: #ef476f;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+  .card {
+    flex-basis: 40%;
+    width: 200px;
+    height: 200px;
+    margin: 1rem;
+  }
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .card__container {
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    min-width: 250px;
+    min-height: 250px;
+    flex-basis: 30%;
+    margin: 2rem;
+  }
+}
