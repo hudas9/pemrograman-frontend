@@ -1,6 +1,5 @@
 /* Small Screen */
 .container {
-  margin: 2rem 0;
   padding: 1rem;
 }
 
@@ -32,7 +31,6 @@ th {
   color: #06d6a0;
 }
 
-table,
 td,
 th {
   border: 1px solid #64748b;

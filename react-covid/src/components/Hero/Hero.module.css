@@ -1,7 +1,6 @@
 /* Small Screen */
 .container {
-  margin: 1rem;
-  padding-top: 3rem;
+  margin-top: 3rem;
 }
 
 .hero {
@@ -10,8 +9,10 @@
   text-align: center;
 }
 
-.hero__left {
-  margin: 2rem 0;
+.hero__image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 2rem;
 }
 
 .hero__title {
@@ -27,6 +28,9 @@
 .hero__description {
   color: #64748b;
   margin-bottom: 1rem;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 .hero__button {
@@ -40,11 +44,6 @@
 .hero__button:hover {
   background-color: #08c290;
   cursor: pointer;
-}
-
-.hero__image {
-  max-width: 70%;
-  height: auto;
 }
 
 /* Large Screen */
@@ -64,10 +63,15 @@
 
   .hero__left {
     flex-basis: 40%;
+    margin: 2rem 0;
   }
 
   .hero__right {
     flex-basis: 40%;
+  }
+
+  .hero__description {
+    width: 100%;
   }
 
   .hero__image {

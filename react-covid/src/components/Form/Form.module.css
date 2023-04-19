@@ -2,18 +2,14 @@
 .container {
   align-items: center;
   background-color: #f8f9fa;
-}
-
-.form__container {
-  padding: 2rem;
+  padding: 1rem;
+  margin-top: 3rem;
+  text-align: center;
+  padding-bottom: 3rem;
 }
 
 .form__image {
   display: none;
-}
-
-.form__container {
-  text-align: center;
 }
 
 .form__title {
@@ -28,7 +24,7 @@
 }
 
 .form__group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .form__label {
@@ -58,10 +54,17 @@
   background-color: #06d6a0;
   color: #fff;
   cursor: pointer;
+  margin-top: 0.5rem;
 }
 
 .form__button:hover {
   background-color: #08c290;
+}
+
+.alert {
+  text-align: left;
+  color: #f72585;
+  font-size: small;
 }
 
 input::-webkit-outer-spin-button,
@@ -95,9 +98,5 @@ input[type="number"] {
 
   .form {
     margin: auto;
-  }
-
-  .form__group {
-    margin-bottom: 0.5rem;
   }
 }

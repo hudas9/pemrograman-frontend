@@ -7,7 +7,7 @@ import Footer from "./../components/Footer/Footer";
 import { useState } from "react";
 import data from "./../utils/constants/provinces";
 
-const Home = () => {
+function Home() {
   const [provinces, setProvinces] = useState(data);
   return (
     <>
@@ -19,6 +19,6 @@ const Home = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default Home;
