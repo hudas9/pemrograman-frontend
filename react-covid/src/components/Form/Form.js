@@ -1,9 +1,8 @@
 import styles from "./Form.module.css";
 import ConceptualIdea from "./ConceptualIdea.svg";
-import Alert from "./../Alert/Alert";
 import { useState } from "react";
 
-const Form = (props) => {
+function Form(props) {
   const { provinces, setProvinces } = props;
 
   const [formData, setFormData] = useState({
@@ -16,7 +15,10 @@ const Form = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   const handleSubmit = (event) => {
@@ -27,13 +29,13 @@ const Form = (props) => {
     const newAlert = {
       province: !province,
       status: !status,
-      total: total <= 0,
+      total: !total || total <= 0,
     };
     setAlert(newAlert);
 
     if (Object.values(newAlert).every((alert) => !alert)) {
       const updatedProvinces = provinces.map((prov) => {
-        if (parseInt(total) > 0 && prov.kota === province) {
+        if (prov.kota === province) {
           return {
             ...prov,
             [status]: prov[status] + parseInt(total),
@@ -42,8 +44,6 @@ const Form = (props) => {
           return prov;
         }
       });
-
-      console.log(updatedProvinces);
 
       setProvinces({ provinces: updatedProvinces });
 
@@ -81,15 +81,13 @@ const Form = (props) => {
                 onChange={handleChange}
               >
                 <option value="">Choose Province</option>
-                {provinces.map((province, index) => {
-                  return (
-                    <option key={index} value={province.kota}>
-                      {province.kota}
-                    </option>
-                  );
+                {provinces.map((province) => {
+                  return <option value={province.kota}>{province.kota}</option>;
                 })}
               </select>
-              {alert.province && <Alert>*Province must be selected</Alert>}
+              {alert.province && (
+                <p className={styles.alert}>*Province must be selected</p>
+              )}
             </div>
             <div className={styles.form__group}>
               <label className={styles.form__label}>Status</label>
@@ -105,7 +103,9 @@ const Form = (props) => {
                 <option value="meninggal">Deaths</option>
                 <option value="dirawat">Treated</option>
               </select>
-              {alert.status && <Alert>*Status must be selected</Alert>}
+              {alert.status && (
+                <p className={styles.alert}>*Status must be selected</p>
+              )}
             </div>
             <div className={styles.form__group}>
               <label className={styles.form__label}>Total</label>
@@ -117,10 +117,11 @@ const Form = (props) => {
                 onChange={handleChange}
               />
               {alert.total && (
-                <Alert>
+                <p className={styles.alert}>
                   *Total must be{" "}
-                  {formData.total < 0 ? "positive number" : "filled"}
-                </Alert>
+                  {/* if formData.total <= 0 return greater than zero, if formData.total === "" return filled */}
+                  {formData.total <= 0 ? "positive number" : "filled"}
+                </p>
               )}
             </div>
             <button className={styles.form__button}>Submit</button>
@@ -129,6 +130,6 @@ const Form = (props) => {
       </section>
     </div>
   );
-};
+}
 
 export default Form;

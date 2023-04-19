@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 
-const Footer = () => {
+function Footer() {
   const today = new Date();
 
   return (
@@ -43,6 +43,6 @@ const Footer = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default Footer;

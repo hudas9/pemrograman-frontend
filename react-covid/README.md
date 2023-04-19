@@ -1,1 +1,1 @@
-https://react-covid-alpha.vercel.app/
+https://react-covid-beta.vercel.app/
