@@ -3,5 +3,5 @@ export default function Popular() {
     <>
       <h1>Popular</h1>
     </>
-  );
+  )
 }

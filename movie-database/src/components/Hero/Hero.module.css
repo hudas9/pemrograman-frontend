@@ -1,4 +1,3 @@
-/* Small Screen */
 .container {
   margin: 1rem;
 }
@@ -14,19 +13,19 @@
 }
 
 .hero__title {
-  color: #06D6A0;
+  color: #06d6a0;
   margin-bottom: 1rem;
   font-size: 2.44rem;
 }
 
 .hero__genre {
-  color: #118AB2;
+  color: #118ab2;
   margin-bottom: 1rem;
   font-size: 1.59rem;
 }
 
 .hero__description {
-  color: #64748B;
+  color: #64748b;
   margin-bottom: 1rem;
 }
 
@@ -34,8 +33,13 @@
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 10px;
-  background-color: #06D6A0;
+  background-color: #06d6a0;
   color: #fff;
+  cursor: pointer;
+}
+
+.hero__button:hover {
+  background-color: #08c290;
 }
 
 .hero__image {
@@ -44,7 +48,6 @@
   border-radius: 25px;
 }
 
-/* Large Screen */
 @media (min-width: 992px) {
   .container {
     max-width: 1200px;

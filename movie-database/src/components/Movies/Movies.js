@@ -1,5 +1,5 @@
-import styles from "./Movies.module.css";
-import Movie from "./../Movie/Movie";
+import styles from "./Movies.module.css"
+import Movie from "../Movie/Movie"
 
 export default function Movies({ movies }) {
   return (
@@ -13,5 +13,5 @@ export default function Movies({ movies }) {
         </div>
       </section>
     </div>
-  );
+  )
 }

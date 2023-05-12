@@ -1,4 +1,3 @@
-/* Small Screen */
 .movie {
   margin-bottom: 1rem;
 }
@@ -11,23 +10,21 @@
 }
 
 .movie__title {
-  color: #06D6A0;
+  color: #06d6a0;
   font-size: 1.95rem;
   margin-bottom: 0.5rem;
 }
 
 .movie__release {
-  color: #64748B;
+  color: #64748b;
 }
 
-/* Medium Screen */
 @media (min-width: 768px) {
   .movie {
     flex-basis: 50%;
   }
 }
 
-/* Large Screen */
 @media (min-width: 992px) {
   .movie {
     flex-basis: 25%;

@@ -1,7 +1,8 @@
-import styles from "./Footer.module.css";
+import styles from "./Footer.module.css"
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
+
   return (
     <div className={styles.container}>
       <footer className={styles.footer}>
@@ -11,7 +12,6 @@ export default function Footer() {
             href="https://github.com/ahmadhudasalam/pemrograman-frontend"
             target="_blank"
             rel="noopener noreferrer"
-            alt="Github Repository"
           >
             Ahmad Huda Salam
           </a>
@@ -19,5 +19,5 @@ export default function Footer() {
         </p>
       </footer>
     </div>
-  );
+  )
 }

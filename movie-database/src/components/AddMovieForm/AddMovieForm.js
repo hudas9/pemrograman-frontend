@@ -1,7 +1,7 @@
-import styles from "./AddMovieForm.module.css";
-import { useState } from "react";
-import { nanoid } from "nanoid";
-import Alert from "../Alert/Alert";
+import styles from "./AddMovieForm.module.css"
+import { useState } from "react"
+import { nanoid } from "nanoid"
+import Alert from "../Alert/Alert"
 
 export default function AddMovieForm({ movies, setMovies }) {
   const [formData, setFormData] = useState({
@@ -9,45 +9,39 @@ export default function AddMovieForm({ movies, setMovies }) {
     year: "",
     genre: "",
     poster: "",
-  });
+  })
 
-  const [alerts, setAlerts] = useState({
-    title: false,
-    year: false,
-    genre: false,
-    poster: false,
-  });
+  const [alerts, setAlerts] = useState({})
 
   function handleChange(event) {
-    const { name, value } = event.target;
+    const { name, value } = event.target
     setFormData({
       ...formData,
       [name]: value,
-    });
+    })
   }
-
-  const { title, year, poster, genre } = formData;
 
   function validate() {
     const newAlerts = {
-      title: !title,
-      year: !year,
-      genre: !genre,
-      poster: !poster,
-    };
-    setAlerts(newAlerts);
-    return Object.values(newAlerts).every((alert) => !alert);
+      title: !formData.title,
+      year: !formData.year,
+      genre: !formData.genre,
+      poster: !formData.poster,
+    }
+    setAlerts(newAlerts)
+    return Object.values(newAlerts).every((alert) => !alert)
   }
 
-  function addMovie() {
-    const movie = {
-      id: nanoid(9),
-      title: title,
-      year: year,
-      genre: genre,
-      poster: poster,
-    };
-    setMovies([...movies, movie]);
+  const newMovie = {
+    id: nanoid(9),
+    title: formData.title,
+    year: formData.year,
+    genre: formData.genre,
+    poster: formData.poster,
+  }
+
+  function addMovie(movie) {
+    setMovies([...movies, movie])
   }
 
   function resetForm() {
@@ -56,12 +50,15 @@ export default function AddMovieForm({ movies, setMovies }) {
       year: "",
       genre: "",
       poster: "",
-    });
+    })
   }
 
   function handleSubmit(event) {
-    event.preventDefault();
-    validate() && addMovie() && resetForm();
+    event.preventDefault()
+    if (validate()) {
+      addMovie(newMovie)
+      resetForm()
+    }
   }
 
   return (
@@ -146,5 +143,5 @@ export default function AddMovieForm({ movies, setMovies }) {
         </div>
       </section>
     </div>
-  );
+  )
 }

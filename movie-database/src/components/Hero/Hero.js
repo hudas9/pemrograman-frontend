@@ -1,4 +1,4 @@
-import styles from "./Hero.module.css";
+import styles from "./Hero.module.css"
 
 export default function Hero() {
   return (
@@ -25,5 +25,5 @@ export default function Hero() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import styles from "./Alert.module.css";
+import styles from "./Alert.module.css"
 
 export default function Alert({ children }) {
-  return <p className={styles.alert}>{children}</p>;
+  return <p className={styles.alert}>{children}</p>
 }

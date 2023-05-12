@@ -1,4 +1,4 @@
-import styles from "./Movie.module.css";
+import styles from "./Movie.module.css"
 
 export default function Movie({ movie }) {
   return (
@@ -11,5 +11,5 @@ export default function Movie({ movie }) {
       <h3 className={styles.movie__title}>{movie.title}</h3>
       <p className={styles.movie__release}>{movie.year}</p>
     </div>
-  );
+  )
 }

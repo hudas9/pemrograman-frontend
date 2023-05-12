@@ -1,28 +1,28 @@
-import styles from "./Navbar.module.css";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css"
+import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function Navbar() {
-  const [isToggle, setIsToggle] = useState(false);
+  const [isToggle, setIsToggle] = useState(false)
 
   function toggleNavbar() {
-    setIsToggle(!isToggle);
+    setIsToggle(!isToggle)
   }
 
   function handleWindowResize() {
-    if (isToggle && window.innerWidth >= 768) {
-      setIsToggle(false);
+    if (window.innerWidth >= 768) {
+      setIsToggle(false)
     }
   }
 
-  window.addEventListener("resize", handleWindowResize);
+  window.addEventListener("resize", handleWindowResize)
 
   return (
     <div className={styles.container}>
       <nav className={styles.navbar}>
         <div>
           <h1 className={styles.navbar__brand}>
-            <Link to="/">Movie App</Link>
+            <a href="/">Movie App</a>
           </h1>
         </div>
         <div className={styles.navbar__container}>
@@ -32,19 +32,29 @@ export default function Navbar() {
             }
           >
             <li className={styles.navbar__item}>
-              <Link to="/">Home</Link>
+              <Link className={styles.navbar__link} to="/">
+                Home
+              </Link>
             </li>
             <li className={styles.navbar__item}>
-              <Link to="/movie/add">Add Movie</Link>
+              <Link className={styles.navbar__link} to="/movie/add">
+                Add Movie
+              </Link>
             </li>
             <li className={styles.navbar__item}>
-              <Link to="/movie/popular">Popular</Link>
+              <Link className={styles.navbar__link} to="/movie/popular">
+                Popular
+              </Link>
             </li>
             <li className={styles.navbar__item}>
-              <Link to="/movie/playing">Now Playing</Link>
+              <Link className={styles.navbar__link} to="/movie/now-playing">
+                Now Playing
+              </Link>
             </li>
             <li className={styles.navbar__item}>
-              <Link to="/movie/top-rated">Top Rated</Link>
+              <Link className={styles.navbar__link} to="/movie/top-rated">
+                Top Rated
+              </Link>
             </li>
           </ul>
           <div className={styles.navbar__toggle}>
@@ -59,5 +69,5 @@ export default function Navbar() {
         </div>
       </nav>
     </div>
-  );
+  )
 }

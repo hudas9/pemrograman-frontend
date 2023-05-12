@@ -3,5 +3,5 @@ export default function TopRated() {
     <>
       <h1>TopRated</h1>
     </>
-  );
+  )
 }

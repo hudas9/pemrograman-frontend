@@ -1,7 +1,7 @@
-export default function NowPlaying() {
+export default function Nowplaying() {
   return (
     <>
       <h1>NowPlaying</h1>
     </>
-  );
+  )
 }
