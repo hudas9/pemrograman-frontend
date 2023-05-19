@@ -5,6 +5,7 @@ import AddMovie from "./pages/movie/AddMovie"
 import Popular from "./pages/movie/Popular"
 import NowPlaying from "./pages/movie/NowPlaying"
 import TopRated from "./pages/movie/TopRated"
+// import Counter from "./components/Counter/Counter"
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
           <Route path="/movie/top-rated" element={<TopRated />} />
         </Routes>
       </Layout>
+
+      {/* <Counter /> */}
     </>
   )
 }
