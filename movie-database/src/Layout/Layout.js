@@ -3,8 +3,14 @@ import Container from "../components/Container/Container"
 import Footer from "../components/Footer/Footer"
 
 export default function Layout({ children }) {
+  const styles = {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+  }
+
   return (
-    <div>
+    <div style={styles}>
       <Navbar />
       <Container>{children}</Container>
       <Footer />
