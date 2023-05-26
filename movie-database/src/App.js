@@ -5,22 +5,25 @@ import AddMovie from "./pages/movie/AddMovie"
 import Popular from "./pages/movie/Popular"
 import NowPlaying from "./pages/movie/NowPlaying"
 import TopRated from "./pages/movie/TopRated"
-// import Counter from "./components/Counter/Counter"
+import { ThemeProvider } from "styled-components"
+import theme from "./utils/constants/theme"
 
-export default function App() {
+function App() {
   return (
     <>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movie/add" element={<AddMovie />} />
-          <Route path="/movie/popular" element={<Popular />} />
-          <Route path="/movie/now-playing" element={<NowPlaying />} />
-          <Route path="/movie/top-rated" element={<TopRated />} />
-        </Routes>
-      </Layout>
-
-      {/* <Counter /> */}
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/add" element={<AddMovie />} />
+            <Route path="/movie/popular" element={<Popular />} />
+            <Route path="/movie/now-playing" element={<NowPlaying />} />
+            <Route path="/movie/top-rated" element={<TopRated />} />
+          </Routes>
+        </Layout>
+      </ThemeProvider>
     </>
   )
 }
+
+export default App

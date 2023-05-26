@@ -2,8 +2,9 @@ import styles from "./AddMovieForm.module.css"
 import { useState } from "react"
 import { nanoid } from "nanoid"
 import Alert from "../Alert/Alert"
+import { Button, Heading } from "../ui"
 
-export default function AddMovieForm({ movies, setMovies }) {
+function AddMovieForm({ movies, setMovies }) {
   const [formData, setFormData] = useState({
     title: "",
     year: "",
@@ -71,7 +72,7 @@ export default function AddMovieForm({ movies, setMovies }) {
         />
       </div>
       <div className={styles.form__right}>
-        <h1 className={styles.form__title}>Add Movie</h1>
+        <Heading>Add Movie</Heading>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.form__group}>
             <label className={styles.form__label} htmlFor="title">
@@ -137,9 +138,11 @@ export default function AddMovieForm({ movies, setMovies }) {
             />
             {alerts.poster && <Alert>*Link poster must be filled</Alert>}
           </div>
-          <button className={styles.form__button}>Add Movie</button>
+          <Button full>Add Movie</Button>
         </form>
       </div>
     </section>
   )
 }
+
+export default AddMovieForm

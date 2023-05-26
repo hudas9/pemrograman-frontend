@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar/Navbar"
 import Container from "../components/Container/Container"
 import Footer from "../components/Footer/Footer"
 
-export default function Layout({ children }) {
+function Layout({ children }) {
   const styles = {
     display: "flex",
     flexDirection: "column",
@@ -17,3 +17,5 @@ export default function Layout({ children }) {
     </div>
   )
 }
+
+export default Layout

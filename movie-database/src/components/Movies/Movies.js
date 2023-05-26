@@ -1,10 +1,11 @@
 import styles from "./Movies.module.css"
 import Movie from "../Movie/Movie"
+import { Heading } from "../ui"
 
-export default function Movies({ movies }) {
+function Movies({ movies }) {
   return (
     <section className={styles.movies}>
-      <h2 className={styles.movies__title}>Latest Movies</h2>
+      <Heading className={styles.movies__title}>Latest Movies</Heading>
       <div className={styles.movie__container}>
         {movies.map((movie) => (
           <Movie key={movie.id} movie={movie} />
@@ -13,3 +14,5 @@ export default function Movies({ movies }) {
     </section>
   )
 }
+
+export default Movies

@@ -1,7 +1,8 @@
-import styles from "./Hero.module.css"
+import StyledHero from "./Hero.styled"
 import { useState, useEffect } from "react"
+import { Button, Heading } from "../ui"
 
-export default function Hero() {
+function Hero() {
   const [movie, setMovie] = useState({})
 
   // Promise
@@ -26,20 +27,18 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className={styles.hero}>
-      <div className={styles.hero__left}>
-        <h2 className={styles.hero__title}>{movie.Title}</h2>
-        <h3 className={styles.hero__genre}>Genre : {movie.Genre}</h3>
-        <p className={styles.hero__description}>{movie.Plot}</p>
-        <button className={styles.hero__button}>Watch</button>
+    <StyledHero>
+      <div>
+        <Heading>{movie.Title}</Heading>
+        <h3>Genre : {movie.Genre}</h3>
+        <p>{movie.Plot}</p>
+        <Button>Watch</Button>
       </div>
-      <div className={styles.hero__right}>
-        <img
-          className={styles.hero__image}
-          src={movie.Poster}
-          alt={movie.Title}
-        />
+      <div>
+        <img src={movie.Poster} alt={movie.Title} />
       </div>
-    </section>
+    </StyledHero>
   )
 }
+
+export default Hero

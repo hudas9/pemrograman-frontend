@@ -4,7 +4,7 @@ import Hero from "../components/Hero/Hero"
 import Movies from "../components/Movies/Movies"
 import AddMovieForm from "../components/AddMovieForm/AddMovieForm"
 
-export default function Home() {
+function Home() {
   const [movies, setMovies] = useState(data)
 
   return (
@@ -15,3 +15,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home
