@@ -1,7 +1,9 @@
+import AddMovieForm from "../../components/AddMovieForm/AddMovieForm"
+
 export default function AddMovie() {
   return (
     <>
-      <h1>AddMovie</h1>
+      <AddMovieForm />
     </>
   )
 }

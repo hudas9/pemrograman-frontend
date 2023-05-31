@@ -20,9 +20,9 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       <nav className={styles.navbar}>
-        <div>
+        <div className={styles.navbar__brand__container}>
           <h1 className={styles.navbar__brand}>
-            <a href="/">Movie App</a>
+            <Link to="/">Movie App</Link>
           </h1>
         </div>
         <div className={styles.navbar__container}>

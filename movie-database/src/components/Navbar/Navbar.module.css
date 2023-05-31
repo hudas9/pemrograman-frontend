@@ -9,6 +9,11 @@
   justify-content: space-between;
 }
 
+.navbar__brand__container {
+  display: flex;
+  align-items: center;
+}
+
 .navbar__brand > a {
   text-decoration: none;
   color: #fff;
@@ -58,23 +63,25 @@
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding: 0;
-  }
-
   .navbar {
     max-width: 1200px;
     margin: auto;
   }
 
+  .navbar__brand {
+    margin: auto 0;
+  }
+
   .navbar__list {
+    text-align: right;
     display: flex;
     list-style: none;
     flex-direction: row;
   }
 
   .navbar__item {
-    margin: auto;
+    padding: 0;
+    margin-left: 1rem;
   }
 
   .navbar__toggle {

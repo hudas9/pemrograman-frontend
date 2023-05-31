@@ -1,11 +1,8 @@
-.container {
-  margin: 1rem;
-}
-
 .hero {
   display: flex;
   flex-direction: column;
   text-align: center;
+  flex-direction: column-reverse;
 }
 
 .hero__left {
@@ -14,13 +11,13 @@
 
 .hero__title {
   color: #06d6a0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 2.44rem;
 }
 
 .hero__genre {
   color: #118ab2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5em;
   font-size: 1.59rem;
 }
 
@@ -30,6 +27,7 @@
 }
 
 .hero__button {
+  font-size: 14px;
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 10px;
@@ -43,17 +41,10 @@
 }
 
 .hero__image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 25px;
+  display: none;
 }
 
 @media (min-width: 992px) {
-  .container {
-    max-width: 1200px;
-    margin: 3rem auto;
-  }
-
   .hero {
     padding: 1rem;
     flex-direction: row;
@@ -63,6 +54,13 @@
   }
 
   .hero__left {
-    flex-basis: 40%;
+    flex-basis: 60%;
+  }
+
+  .hero__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
   }
 }
