@@ -1,13 +1,13 @@
-import StyledFooter from "./Footer.styled"
+import StyledFooter from './Footer.styled'
 
-function Footer() {
+export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
     <StyledFooter>
       <footer>
         <p>
-          &#169; {year}{" "}
+          &#169; {year}{' '}
           <a
             href="https://github.com/ahmadhudasalam/pemrograman-frontend"
             target="_blank"
@@ -21,5 +21,3 @@ function Footer() {
     </StyledFooter>
   )
 }
-
-export default Footer

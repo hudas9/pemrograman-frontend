@@ -26,7 +26,6 @@ const Button = styled.button`
 
 const Heading = styled.h2`
   color: #06d6a0;
-  margin-bottom: 0.5rem;
   font-size: 2.44rem;
 `
 

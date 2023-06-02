@@ -3,24 +3,24 @@ import Movies from '../../components/Movies/Movies'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-export default function Nowplaying() {
+export default function TopRatedMovies() {
   const [movie, setMovie] = useState([])
   const API_KEY = process.env.REACT_APP_API_KEY
 
-  async function getNowPlayingMovie() {
-    const URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`
+  async function getTopRatedMovie() {
+    const URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`
     const response = await axios(URL)
     setMovie(response.data.results)
   }
 
   useEffect(() => {
-    getNowPlayingMovie()
+    getTopRatedMovie()
   }, [])
 
   return (
     <>
       <Hero />
-      <Movies movies={movie} title="Now Playing" />
+      <Movies movies={movie} title="Top Rated Movie" />
     </>
   )
 }

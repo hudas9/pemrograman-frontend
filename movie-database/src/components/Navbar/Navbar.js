@@ -1,9 +1,11 @@
-import StyledNavbar from "./Navbar.styled"
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import StyledNavbar from './Navbar.styled'
+import { useState } from 'react'
+import { useLocation, Link } from 'react-router-dom'
 
-function Navbar() {
+export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false)
+  const currentPath = useLocation().pathname
+  const [activeLink, setActiveLink] = useState(currentPath)
 
   function toggleNavbar() {
     setShowMenu(!showMenu)
@@ -15,7 +17,7 @@ function Navbar() {
     }
   }
 
-  window.addEventListener("resize", handleWindowResize)
+  window.addEventListener('resize', handleWindowResize)
 
   return (
     <StyledNavbar>
@@ -26,25 +28,51 @@ function Navbar() {
           </h1>
         </div>
         <div>
-          {/* CSS Module */}
-          {/* <ul className={showMenu ? styles.navbar__list__show : navbar__list}> */}
-
-          {/* styled-components : class */}
-          <ul className={showMenu ? "navbar__list__show" : "navbar__list"}>
+          <ul className={showMenu ? 'navbar__list__show' : 'navbar__list'}>
             <li>
-              <Link to="/">Home</Link>
+              <Link
+                to="/"
+                className={activeLink === '/' ? 'active' : ''}
+                onClick={() => setActiveLink('/')}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/movie/add">Add Movie</Link>
+              <Link
+                to="/movie/add"
+                className={activeLink === '/movie/add' ? 'active' : ''}
+                onClick={() => setActiveLink('/movie/add')}
+              >
+                Add Movie
+              </Link>
             </li>
             <li>
-              <Link to="/movie/popular">Popular</Link>
+              <Link
+                to="/movie/popular"
+                className={activeLink === '/movie/popular' ? 'active' : ''}
+                onClick={() => setActiveLink('/movie/popular')}
+              >
+                Popular
+              </Link>
             </li>
             <li>
-              <Link to="/movie/now-playing">Now Playing</Link>
+              <Link
+                to="/movie/now-playing"
+                className={activeLink === '/movie/now-playing' ? 'active' : ''}
+                onClick={() => setActiveLink('/movie/now-playing')}
+              >
+                Now Playing
+              </Link>
             </li>
             <li>
-              <Link to="/movie/top-rated">Top Rated</Link>
+              <Link
+                to="/movie/top-rated"
+                className={activeLink === '/movie/top-rated' ? 'active' : ''}
+                onClick={() => setActiveLink('/movie/top-rated')}
+              >
+                Top Rated
+              </Link>
             </li>
           </ul>
           <div>
@@ -61,5 +89,3 @@ function Navbar() {
     </StyledNavbar>
   )
 }
-
-export default Navbar

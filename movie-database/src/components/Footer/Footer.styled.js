@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const StyledFooter = styled.div`
   background-color: #06d6a0;

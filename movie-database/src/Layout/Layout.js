@@ -1,12 +1,12 @@
-import Navbar from "../components/Navbar/Navbar"
-import Container from "../components/Container/Container"
-import Footer from "../components/Footer/Footer"
+import Navbar from '../components/Navbar/Navbar'
+import Container from '../components/Container/Container'
+import Footer from '../components/Footer/Footer'
 
-function Layout({ children }) {
+export default function Layout({ children }) {
   const styles = {
-    display: "flex",
-    flexDirection: "column",
-    minHeight: "100vh",
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
   }
 
   return (
@@ -17,5 +17,3 @@ function Layout({ children }) {
     </div>
   )
 }
-
-export default Layout

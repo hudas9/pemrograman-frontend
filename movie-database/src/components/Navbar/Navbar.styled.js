@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const StyledNavbar = styled.div`
   background-color: #06d6a0;
@@ -61,6 +61,11 @@ const StyledNavbar = styled.div`
     display: block;
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  .active {
+    font-weight: bold;
+    background-color: #08c290;
   }
 
   @media (min-width: 768px) {

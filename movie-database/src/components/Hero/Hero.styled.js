@@ -4,6 +4,7 @@ const StyledHero = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 2rem;
 
   & > div:nth-child(1) {
     margin-bottom: 1rem;
@@ -11,7 +12,6 @@ const StyledHero = styled.div`
 
   h3 {
     color: #118ab2;
-    margin-bottom: 0.5em;
     font-size: 1.59rem;
   }
 
@@ -22,6 +22,22 @@ const StyledHero = styled.div`
 
   img {
     display: none;
+    max-height: 500px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #06d6a0;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  button:hover {
+    background-color: #08c290;
   }
 
   @media (min-width: 992px) {
@@ -33,7 +49,7 @@ const StyledHero = styled.div`
     margin-bottom: 2rem;
 
     & > div:nth-child(1) {
-      flex-basis: 60%;
+      flex-basis: 50%;
     }
 
     img {

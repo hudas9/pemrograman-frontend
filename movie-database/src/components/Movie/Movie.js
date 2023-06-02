@@ -1,13 +1,16 @@
-import StyledMovie from "./Movie.styled"
+import StyledMovie from './Movie.styled'
 
-function Movie({ movie }) {
+export default function Movie({ movie }) {
   return (
     <StyledMovie>
-      <img src={movie.poster} alt={movie.title} />
+      <img
+        src={
+          movie.poster || `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+        }
+        alt={movie.title}
+      />
       <h3>{movie.title}</h3>
-      <p>{movie.year}</p>
+      <p>{movie.year || movie.release_date?.split('-')[0]}</p>
     </StyledMovie>
   )
 }
-
-export default Movie

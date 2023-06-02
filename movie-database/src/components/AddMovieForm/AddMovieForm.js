@@ -1,15 +1,15 @@
-import styles from "./AddMovieForm.module.css"
-import { useState } from "react"
-import { nanoid } from "nanoid"
-import Alert from "../Alert/Alert"
-import { Button, Heading } from "../ui"
+import styles from './AddMovieForm.module.css'
+import { useState } from 'react'
+import { nanoid } from 'nanoid'
+import Alert from '../Alert/Alert'
+import { Heading } from '../ui'
 
-function AddMovieForm({ movies, setMovies }) {
+export default function AddMovieForm({ movies, setMovies }) {
   const [formData, setFormData] = useState({
-    title: "",
-    year: "",
-    genre: "",
-    poster: "",
+    title: '',
+    year: '',
+    genre: '',
+    poster: '',
   })
 
   const [alerts, setAlerts] = useState({})
@@ -47,10 +47,10 @@ function AddMovieForm({ movies, setMovies }) {
 
   function resetForm() {
     setFormData({
-      title: "",
-      year: "",
-      genre: "",
-      poster: "",
+      title: '',
+      year: '',
+      genre: '',
+      poster: '',
     })
   }
 
@@ -138,11 +138,9 @@ function AddMovieForm({ movies, setMovies }) {
             />
             {alerts.poster && <Alert>*Link poster must be filled</Alert>}
           </div>
-          <Button full>Add Movie</Button>
+          <button className={styles.form__button}>Add Movie</button>
         </form>
       </div>
     </section>
   )
 }
-
-export default AddMovieForm
