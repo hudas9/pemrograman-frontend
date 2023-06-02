@@ -1,13 +1,13 @@
-import styles from "./Footer.module.css"
+import StyledFooter from './Footer.styled'
 
 export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <div className={styles.container}>
-      <footer className={styles.footer}>
-        <p className={styles.footer__author}>
-          &#169; {year}{" "}
+    <StyledFooter>
+      <footer>
+        <p>
+          &#169; {year}{' '}
           <a
             href="https://github.com/ahmadhudasalam/pemrograman-frontend"
             target="_blank"
@@ -18,6 +18,6 @@ export default function Footer() {
           . All rights reversed.
         </p>
       </footer>
-    </div>
+    </StyledFooter>
   )
 }

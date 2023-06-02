@@ -1,4 +1,4 @@
-import AddMovieForm from "../../components/AddMovieForm/AddMovieForm"
+import AddMovieForm from '../../components/AddMovieForm/AddMovieForm'
 
 export default function AddMovie() {
   return (

@@ -1,45 +1,54 @@
-import styles from "./Hero.module.css"
-import { useState, useEffect } from "react"
+import StyledHero from './Hero.styled'
+import { useState, useEffect } from 'react'
+import { Heading } from '../ui'
+import axios from 'axios'
 
 export default function Hero() {
   const [movie, setMovie] = useState({})
+  const API_KEY = process.env.REACT_APP_API_KEY
+  const genres = movie.genres?.map((genre) => genre.name).join(', ')
+  const idTrailer = movie.videos?.results[0].key
 
-  // Promise
-  function getMovie() {
-    fetch(
-      `https://www.omdbapi.com/?i=tt3896198&apikey=${process.env.REACT_APP_API_KEY}`
-    )
-      .then((response) => response.json())
-      .then((data) => setMovie(data))
+  async function getTrendingMovie() {
+    const URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`
+    const response = await axios(URL)
+    return response.data.results[
+      Math.floor(Math.random() * response.data.results.length)
+    ]
   }
 
-  // Async Await
-  // async function getMovie() {
-  //   const url = `https://www.omdbapi.com/?i=tt3896198&apikey=${process.env.REACT_APP_API_KEY}`
-  //   const response = await fetch(url)
-  //   const data = await response.json()
-  //   setMovie(data)
-  // }
+  async function getDetails() {
+    const movie = await getTrendingMovie()
+    const idMovie = movie.id
+    const URL = `https://api.themoviedb.org/3/movie/${idMovie}?api_key=${API_KEY}&append_to_response=videos`
+    const response = await axios(URL)
+    setMovie(response.data)
+  }
 
   useEffect(() => {
-    getMovie()
+    getDetails()
   }, [])
 
   return (
-    <section className={styles.hero}>
-      <div className={styles.hero__left}>
-        <h2 className={styles.hero__title}>{movie.Title}</h2>
-        <h3 className={styles.hero__genre}>Genre : {movie.Genre}</h3>
-        <p className={styles.hero__description}>{movie.Plot}</p>
-        <button className={styles.hero__button}>Watch</button>
+    <StyledHero>
+      <div>
+        <Heading>{movie.title}</Heading>
+        <h3>Genre : {genres}</h3>
+        <p>{movie.overview}</p>
+        <a
+          href={`https://www.youtube.com/watch?v=${idTrailer}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button>Watch</button>
+        </a>
       </div>
-      <div className={styles.hero__right}>
+      <div>
         <img
-          className={styles.hero__image}
-          src={movie.Poster}
-          alt={movie.Title}
+          src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+          alt={movie.original_title}
         />
       </div>
-    </section>
+    </StyledHero>
   )
 }

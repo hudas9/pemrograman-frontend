@@ -1,14 +1,15 @@
-import styles from "./AddMovieForm.module.css"
-import { useState } from "react"
-import { nanoid } from "nanoid"
-import Alert from "../Alert/Alert"
+import styles from './AddMovieForm.module.css'
+import { useState } from 'react'
+import { nanoid } from 'nanoid'
+import Alert from '../Alert/Alert'
+import { Heading } from '../ui'
 
 export default function AddMovieForm({ movies, setMovies }) {
   const [formData, setFormData] = useState({
-    title: "",
-    year: "",
-    genre: "",
-    poster: "",
+    title: '',
+    year: '',
+    genre: '',
+    poster: '',
   })
 
   const [alerts, setAlerts] = useState({})
@@ -46,10 +47,10 @@ export default function AddMovieForm({ movies, setMovies }) {
 
   function resetForm() {
     setFormData({
-      title: "",
-      year: "",
-      genre: "",
-      poster: "",
+      title: '',
+      year: '',
+      genre: '',
+      poster: '',
     })
   }
 
@@ -71,7 +72,7 @@ export default function AddMovieForm({ movies, setMovies }) {
         />
       </div>
       <div className={styles.form__right}>
-        <h1 className={styles.form__title}>Add Movie</h1>
+        <Heading>Add Movie</Heading>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.form__group}>
             <label className={styles.form__label} htmlFor="title">

@@ -1,65 +1,83 @@
-import styles from "./Navbar.module.css"
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import StyledNavbar from './Navbar.styled'
+import { useState } from 'react'
+import { useLocation, Link } from 'react-router-dom'
 
 export default function Navbar() {
-  const [isToggle, setIsToggle] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
+  const currentPath = useLocation().pathname
+  const [activeLink, setActiveLink] = useState(currentPath)
 
   function toggleNavbar() {
-    setIsToggle(!isToggle)
+    setShowMenu(!showMenu)
   }
 
   function handleWindowResize() {
     if (window.innerWidth >= 768) {
-      setIsToggle(false)
+      setShowMenu(false)
     }
   }
 
-  window.addEventListener("resize", handleWindowResize)
+  window.addEventListener('resize', handleWindowResize)
 
   return (
-    <div className={styles.container}>
-      <nav className={styles.navbar}>
-        <div className={styles.navbar__brand__container}>
-          <h1 className={styles.navbar__brand}>
+    <StyledNavbar>
+      <nav>
+        <div>
+          <h1>
             <Link to="/">Movie App</Link>
           </h1>
         </div>
-        <div className={styles.navbar__container}>
-          <ul
-            className={
-              isToggle ? styles.navbar__list__active : styles.navbar__list
-            }
-          >
-            <li className={styles.navbar__item}>
-              <Link className={styles.navbar__link} to="/">
+        <div>
+          <ul className={showMenu ? 'navbar__list__show' : 'navbar__list'}>
+            <li>
+              <Link
+                to="/"
+                className={activeLink === '/' ? 'active' : ''}
+                onClick={() => setActiveLink('/')}
+              >
                 Home
               </Link>
             </li>
-            <li className={styles.navbar__item}>
-              <Link className={styles.navbar__link} to="/movie/add">
+            <li>
+              <Link
+                to="/movie/add"
+                className={activeLink === '/movie/add' ? 'active' : ''}
+                onClick={() => setActiveLink('/movie/add')}
+              >
                 Add Movie
               </Link>
             </li>
-            <li className={styles.navbar__item}>
-              <Link className={styles.navbar__link} to="/movie/popular">
+            <li>
+              <Link
+                to="/movie/popular"
+                className={activeLink === '/movie/popular' ? 'active' : ''}
+                onClick={() => setActiveLink('/movie/popular')}
+              >
                 Popular
               </Link>
             </li>
-            <li className={styles.navbar__item}>
-              <Link className={styles.navbar__link} to="/movie/now-playing">
+            <li>
+              <Link
+                to="/movie/now-playing"
+                className={activeLink === '/movie/now-playing' ? 'active' : ''}
+                onClick={() => setActiveLink('/movie/now-playing')}
+              >
                 Now Playing
               </Link>
             </li>
-            <li className={styles.navbar__item}>
-              <Link className={styles.navbar__link} to="/movie/top-rated">
+            <li>
+              <Link
+                to="/movie/top-rated"
+                className={activeLink === '/movie/top-rated' ? 'active' : ''}
+                onClick={() => setActiveLink('/movie/top-rated')}
+              >
                 Top Rated
               </Link>
             </li>
           </ul>
-          <div className={styles.navbar__toggle}>
+          <div>
             <span onClick={toggleNavbar}>
-              {isToggle ? (
+              {showMenu ? (
                 <i className="fas fa-times"></i>
               ) : (
                 <i className="fas fa-bars"></i>
@@ -68,6 +86,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </StyledNavbar>
   )
 }

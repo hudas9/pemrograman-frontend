@@ -23,7 +23,7 @@
   display: none;
 }
 
-.navbar__list__active {
+.navbar__list__show {
   border-top: 1px solid #f8f9fa;
   display: block;
   list-style: none;

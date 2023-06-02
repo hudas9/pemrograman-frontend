@@ -11,10 +11,6 @@
   margin: auto;
 }
 
-.footer__title {
-  margin-bottom: 1rem;
-}
-
 .footer__author > a {
   text-decoration: none;
   color: #fff;
