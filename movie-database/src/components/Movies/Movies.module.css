@@ -1,9 +1,10 @@
 .movies {
   text-align: center;
+  margin-top: 5rem;
 }
 
 .movies__title {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 2.45rem;
   color: #06d6a0;
 }

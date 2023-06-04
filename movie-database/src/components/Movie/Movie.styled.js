@@ -1,11 +1,11 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const StyledMovie = styled.div`
   margin-bottom: 2rem;
   position: relative;
 
   img {
-    width: 70%;
+    width: 95%;
     border-radius: 25px;
     height: 450px;
   }
@@ -21,7 +21,7 @@ const StyledMovie = styled.div`
 
   @media screen and (min-width: 768px) {
     flex-basis: 50%;
-    height: 500px;
+    height: 550px;
   }
 
   @media screen and (min-width: 992px) {
