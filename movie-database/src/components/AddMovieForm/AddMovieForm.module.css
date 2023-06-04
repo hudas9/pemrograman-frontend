@@ -79,6 +79,11 @@ select {
     max-width: 1200px;
   }
 
+  .form__left {
+    margin-right: 2rem;
+    align-items: center;
+  }
+
   .form__image {
     max-width: 100%;
     height: auto;
