@@ -4,10 +4,10 @@ import { Heading } from '../ui'
 import axios from 'axios'
 
 export default function Hero() {
-  const [movie, setMovie] = useState({})
+  const [movie, setMovie] = useState('')
   const API_KEY = process.env.REACT_APP_API_KEY
-  const genres = movie.genres?.map((genre) => genre.name).join(', ')
-  const idTrailer = movie.videos?.results[0].key
+  const genres = movie && movie.genres.map((genre) => genre.name).join(', ')
+  const idTrailer = movie && movie.videos.results[0].key
 
   async function getTrendingMovie() {
     const URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`
