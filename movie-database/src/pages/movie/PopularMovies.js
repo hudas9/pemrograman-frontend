@@ -4,7 +4,7 @@ import Hero from '../../components/Hero/Hero'
 import Movies from '../../components/Movies/Movies'
 
 function PopularMovie() {
-  const [movie, setMovie] = useState([])
+  const [movie, setMovie] = useState('')
 
   async function getPopularMovie() {
     const API_KEY = process.env.REACT_APP_API_KEY

@@ -6,9 +6,8 @@ export default function Movies({ movies, title }) {
     <section className={styles.movies}>
       <h2 className={styles.movies__title}>{title}</h2>
       <div className={styles.movie__container}>
-        {movies.map((movie) => (
-          <Movie key={movie.id} movie={movie} />
-        ))}
+        {movies &&
+          movies.map((movie) => <Movie key={movie.id} movie={movie} />)}
       </div>
     </section>
   )

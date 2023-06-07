@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 export default function TopRatedMovies() {
-  const [movie, setMovie] = useState([])
+  const [movie, setMovie] = useState('')
   const API_KEY = process.env.REACT_APP_API_KEY
 
   async function getTopRatedMovie() {
