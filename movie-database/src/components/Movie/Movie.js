@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import StyledMovie from './Movie.styled'
 
 export default function Movie({ movie }) {
@@ -9,7 +11,9 @@ export default function Movie({ movie }) {
         }
         alt={movie.title}
       />
-      <h3>{movie.title}</h3>
+      <Link to={`/movie/${movie.id}`}>
+        <h3>{movie.title}</h3>
+      </Link>
       <p>{movie.year || movie.release_date?.split('-')[0]}</p>
     </StyledMovie>
   )

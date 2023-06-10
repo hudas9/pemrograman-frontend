@@ -1,32 +1,30 @@
-import StyledHero from './Hero.styled'
 import { useState, useEffect } from 'react'
-import { Heading } from '../ui'
 import axios from 'axios'
+import ENDPOINTS from '../../utils/constants/endpoints'
+import StyledHero from './Hero.styled'
+import { Heading } from '../ui'
 
 export default function Hero() {
   const [movie, setMovie] = useState('')
-  const API_KEY = process.env.REACT_APP_API_KEY
   const genres = movie && movie.genres.map((genre) => genre.name).join(', ')
   const idTrailer = movie && movie.videos.results[0].key
 
   async function getTrendingMovie() {
-    const URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`
-    const response = await axios(URL)
+    const response = await axios(ENDPOINTS.TRENDING)
     return response.data.results[
       Math.floor(Math.random() * response.data.results.length)
     ]
   }
 
-  async function getDetails() {
+  async function getDetail() {
     const movie = await getTrendingMovie()
     const idMovie = movie.id
-    const URL = `https://api.themoviedb.org/3/movie/${idMovie}?api_key=${API_KEY}&append_to_response=videos`
-    const response = await axios(URL)
+    const response = await axios(ENDPOINTS.DETAIL(idMovie))
     setMovie(response.data)
   }
 
   useEffect(() => {
-    getDetails()
+    getDetail()
   }, [])
 
   return (
