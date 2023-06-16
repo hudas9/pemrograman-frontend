@@ -1,8 +1,9 @@
-## Praktikum Pertemuan 12
+## Praktikum Pertemuan 13
 
-- Menambahkan page [Detail](src/pages/movie/Detail.js)
-- Menambahkan file konstan [ENDPOINTS](src/utils/constants/endpoints.js)
+- Refactor [AddMovieForm Component](src/components/AddMovieForm/AddMovieForm.js) menggunakan lifting state
+- Props Drilling
+- Redux Toolkit
 
-## Task Pertemuan 12
+## Task Pertemuan 13
 
-- Menambahkan endpoint untuk [NowPlaying](src/pages/movie/NowPlaying.js), [TopRated](src/pages/movie/TopRated.js), [Detail](src/pages/movie/Detail.js), [Recommendations](src/components/DetailMovie/DetailMovie.js), [Trending](src/components/Hero/Hero.js)
+- Push hasil praktikum ke github

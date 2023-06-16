@@ -20,20 +20,23 @@ export default function Detail({ movie }) {
   useEffect(() => {
     getRecomendationsMovies()
   }, [id])
-
   return (
     <>
       <StyledDetailMovie>
         <div>
           <img
-            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            src={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                : 'https://placeholder.co/336x504?text=Poster'
+            }
             alt={movie.original_title}
           />
         </div>
         <div>
           <Heading>{movie.title}</Heading>
           <h3>
-            Genre : {genres} - {movie.vote_average.toFixed(2)}
+            Genre : {genres} - {movie.vote_average?.toFixed(2)}
           </h3>
           <p>{movie.overview}</p>
           <a

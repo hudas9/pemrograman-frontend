@@ -5,7 +5,6 @@ import { useLocation, Link } from 'react-router-dom'
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false)
   const currentPath = useLocation().pathname
-  const [activeLink, setActiveLink] = useState(currentPath)
 
   function toggleNavbar() {
     setShowMenu(!showMenu)
@@ -30,19 +29,14 @@ export default function Navbar() {
         <div>
           <ul className={showMenu ? 'navbar__list__show' : 'navbar__list'}>
             <li>
-              <Link
-                to="/"
-                className={activeLink === '/' ? 'active' : ''}
-                onClick={() => setActiveLink('/')}
-              >
+              <Link to="/" className={currentPath === '/' ? 'active' : ''}>
                 Home
               </Link>
             </li>
             <li>
               <Link
                 to="/movie/add"
-                className={activeLink === '/movie/add' ? 'active' : ''}
-                onClick={() => setActiveLink('/movie/add')}
+                className={currentPath === '/movie/add' ? 'active' : ''}
               >
                 Add Movie
               </Link>
@@ -50,8 +44,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/movie/popular"
-                className={activeLink === '/movie/popular' ? 'active' : ''}
-                onClick={() => setActiveLink('/movie/popular')}
+                className={currentPath === '/movie/popular' ? 'active' : ''}
               >
                 Popular
               </Link>
@@ -59,8 +52,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/movie/now-playing"
-                className={activeLink === '/movie/now-playing' ? 'active' : ''}
-                onClick={() => setActiveLink('/movie/now-playing')}
+                className={currentPath === '/movie/now-playing' ? 'active' : ''}
               >
                 Now Playing
               </Link>
@@ -68,8 +60,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/movie/top-rated"
-                className={activeLink === '/movie/top-rated' ? 'active' : ''}
-                onClick={() => setActiveLink('/movie/top-rated')}
+                className={currentPath === '/movie/top-rated' ? 'active' : ''}
               >
                 Top Rated
               </Link>
