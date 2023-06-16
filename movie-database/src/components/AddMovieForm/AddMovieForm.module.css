@@ -1,9 +1,10 @@
-.form__image {
-  display: none;
-}
-
 .form__container {
   text-align: center;
+  margin: 2rem auto;
+}
+
+.form__image {
+  display: none;
 }
 
 .form__title {
@@ -33,7 +34,7 @@
   padding: 0.5rem;
   border: 1px solid #06d6a0;
   border-radius: 5px;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 
 .form__input:focus {
@@ -75,7 +76,12 @@ select {
     display: flex;
     justify-content: space-evenly;
     margin: 2rem auto;
-    width: 1200px;
+    max-width: 1200px;
+  }
+
+  .form__left {
+    margin-right: 2rem;
+    align-items: center;
   }
 
   .form__image {

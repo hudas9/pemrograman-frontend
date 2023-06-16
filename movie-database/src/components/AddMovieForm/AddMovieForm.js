@@ -3,15 +3,19 @@ import { useState } from 'react'
 import { nanoid } from 'nanoid'
 import Alert from '../Alert/Alert'
 import { Heading } from '../ui'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addMovie } from '../../features/moviesSlice'
 
-export default function AddMovieForm({ movies, setMovies }) {
+export default function AddMovieForm() {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   const [formData, setFormData] = useState({
     title: '',
     year: '',
     genre: '',
     poster: '',
   })
-
   const [alerts, setAlerts] = useState({})
 
   function handleChange(event) {
@@ -41,8 +45,9 @@ export default function AddMovieForm({ movies, setMovies }) {
     poster: formData.poster,
   }
 
-  function addMovie(movie) {
-    setMovies([...movies, movie])
+  function submitMovie() {
+    dispatch(addMovie(newMovie))
+    navigate('/')
   }
 
   function resetForm() {
@@ -57,7 +62,7 @@ export default function AddMovieForm({ movies, setMovies }) {
   function handleSubmit(event) {
     event.preventDefault()
     if (validate()) {
-      addMovie(newMovie)
+      submitMovie()
       resetForm()
     }
   }

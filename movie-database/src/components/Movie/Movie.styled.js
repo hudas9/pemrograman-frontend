@@ -1,13 +1,13 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const StyledMovie = styled.div`
   margin-bottom: 2rem;
   position: relative;
 
   img {
-    width: 70%;
+    width: 95%;
     border-radius: 25px;
-    height: 450px;
+    height: auto;
   }
 
   h3 {
@@ -19,19 +19,21 @@ const StyledMovie = styled.div`
     color: #64748b;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   @media screen and (min-width: 768px) {
     flex-basis: 50%;
-    height: 500px;
   }
 
   @media screen and (min-width: 992px) {
     flex-basis: 25%;
     padding: 1rem;
-    height: 525px;
+    margin-bottom: 1rem;
 
     img {
       width: 100%;
-      height: auto;
     }
   }
 `

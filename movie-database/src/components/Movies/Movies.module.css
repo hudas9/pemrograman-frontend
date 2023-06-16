@@ -1,5 +1,6 @@
 .movies {
   text-align: center;
+  margin-top: 5rem;
 }
 
 .movies__title {
@@ -18,6 +19,5 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
   }
 }

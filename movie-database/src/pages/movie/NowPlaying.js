@@ -1,16 +1,17 @@
 import Hero from '../../components/Hero/Hero'
 import Movies from '../../components/Movies/Movies'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
+import ENDPOINTS from '../../utils/constants/endpoints'
+import { useDispatch } from 'react-redux'
+import { updateMovies } from '../../features/moviesSlice'
 
 export default function Nowplaying() {
-  const [movie, setMovie] = useState([])
-  const API_KEY = process.env.REACT_APP_API_KEY
+  const dispatch = useDispatch()
 
   async function getNowPlayingMovie() {
-    const URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`
-    const response = await axios(URL)
-    setMovie(response.data.results)
+    const response = await axios(ENDPOINTS.NOW_PLAYING)
+    dispatch(updateMovies(response.data.results))
   }
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Nowplaying() {
   return (
     <>
       <Hero />
-      <Movies movies={movie} title="Now Playing" />
+      <Movies title="Now Playing" />
     </>
   )
 }

@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-const StyledHero = styled.div`
+const StyledDetailMovie = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 2rem auto;
 
-  & > div:nth-child(1) {
+  & > div:nth-child(2) {
     margin-bottom: 1rem;
   }
 
@@ -27,7 +27,6 @@ const StyledHero = styled.div`
 
   img {
     display: none;
-    max-height: 500px;
   }
 
   button {
@@ -53,14 +52,23 @@ const StyledHero = styled.div`
     flex-direction: row;
     align-items: center;
 
-    & > div:nth-child(1) {
-      flex-basis: 50%;
-      text-align: left;
-      padding-right: 1rem;
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    h2,
+    h3 {
+      margin-bottom: 1rem;
     }
 
     & > div:nth-child(2) {
-      flex-basis: 50%;
+      flex-basis: 70%;
+      text-align: left;
+      margin-left: 3rem;
+    }
+
+    & > div:nth-child(1) {
+      flex-basis: 30%;
     }
 
     img {
@@ -72,4 +80,4 @@ const StyledHero = styled.div`
   }
 `
 
-export default StyledHero
+export default StyledDetailMovie
