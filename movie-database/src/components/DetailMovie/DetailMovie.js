@@ -6,20 +6,21 @@ import StyledDetailMovie from './DetailMovie.styled'
 import { Heading } from '../ui'
 import Movies from '../Movies/Movies'
 
-export default function Detail({ movie }) {
-  const [movies, setMovies] = useState('')
+export default function Detail() {
+  const [movie, setMovie] = useState('')
   const { id } = useParams()
   const genres = movie && movie.genres.map((genre) => genre.name).join(', ')
   const idTrailer = movie && movie.videos.results[0]?.key
 
-  async function getRecomendationsMovies() {
-    const response = await axios(ENDPOINTS.RECOMMENDATIONS(id))
-    setMovies(response.data.results)
+  async function getDetailMovie() {
+    const response = await axios(ENDPOINTS.DETAIL(id))
+    setMovie(response.data)
   }
 
   useEffect(() => {
-    getRecomendationsMovies()
+    getDetailMovie()
   }, [id])
+
   return (
     <>
       <StyledDetailMovie>
@@ -48,7 +49,6 @@ export default function Detail({ movie }) {
           </a>
         </div>
       </StyledDetailMovie>
-      <Movies movies={movies} title="Recommendations Movie" />
     </>
   )
 }

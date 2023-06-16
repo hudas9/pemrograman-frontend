@@ -3,23 +3,25 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import ENDPOINTS from '../../utils/constants/endpoints'
 import DetailMovie from '../../components/DetailMovie/DetailMovie'
+import Movies from '../../components/Movies/Movies'
 
 export default function Detail() {
-  const [movie, setMovie] = useState('')
+  const [movies, setMovies] = useState('')
   const { id } = useParams()
 
-  async function getDetailMovie() {
-    const response = await axios(ENDPOINTS.DETAIL(id))
-    setMovie(response.data)
+  async function getRecomendationsMovies() {
+    const response = await axios(ENDPOINTS.RECOMMENDATIONS(id))
+    setMovies(response.data.results)
   }
 
   useEffect(() => {
-    getDetailMovie()
+    getRecomendationsMovies()
   }, [id])
 
   return (
     <>
-      <DetailMovie movie={movie} />
+      <DetailMovie />
+      <Movies movies={movies} title="Recommendations Movie" />
     </>
   )
 }
