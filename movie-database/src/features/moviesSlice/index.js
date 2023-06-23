@@ -10,11 +10,14 @@ const moviesSlice = createSlice({
     addMovie(state, action) {
       state.movies.push(action.payload)
     },
+    updateMovies(state, action) {
+      state.movies = action.payload
+    },
   },
 })
 
-const { addMovie } = moviesSlice.actions
+const { addMovie, updateMovies } = moviesSlice.actions
 const movieReducer = moviesSlice.reducer
 
-export { addMovie }
+export { addMovie, updateMovies }
 export default movieReducer
