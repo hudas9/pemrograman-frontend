@@ -9,7 +9,7 @@ export default function Home() {
   const dispatch = useDispatch()
   const movies = useSelector((store) => store.movies.movies)
 
-  dispatch(updateMovies(data))
+  dispatch(updateMovies(movies))
 
   return (
     <>
