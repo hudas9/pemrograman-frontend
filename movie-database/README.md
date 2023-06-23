@@ -1,9 +1,8 @@
-## Praktikum Pertemuan 13
+## Praktikum Pertemuan 14
 
-- Refactor [AddMovieForm Component](src/components/AddMovieForm/AddMovieForm.js) menggunakan lifting state
-- Props Drilling
-- Redux Toolkit
+- Fixing bug movies
+- Deploy to vercel
 
-## Task Pertemuan 13
+## Task Pertemuan 14
 
-- Push hasil praktikum ke github
+- Push hasil praktikum ke github & link vercel
