@@ -4,6 +4,7 @@ import ENDPOINTS from '../../utils/constants/endpoints'
 import axios from 'axios'
 import StyledDetailMovie from './DetailMovie.styled'
 import { Heading } from '../ui'
+import Movies from '../Movies/Movies'
 
 export default function Detail() {
   const [movie, setMovie] = useState('')

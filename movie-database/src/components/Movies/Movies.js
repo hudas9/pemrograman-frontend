@@ -3,7 +3,7 @@ import Movie from '../Movie/Movie'
 import { useSelector } from 'react-redux'
 
 export default function Movies({ title }) {
-  const movies = useSelector((state) => state.movies.movies)
+  const movies = useSelector((store) => store.movies.movies)
   return (
     <section className={styles.movies}>
       <h2 className={styles.movies__title}>{title}</h2>
