@@ -3,13 +3,15 @@ import Hero from '../components/Hero/Hero'
 import Movies from '../components/Movies/Movies'
 import { updateMovies } from '../features/moviesSlice'
 import { useSelector } from 'react-redux'
-import data from '../utils/constants/data'
+import { useEffect } from 'react'
 
 export default function Home() {
   const dispatch = useDispatch()
-  const movies = useSelector((store) => store.movies.movies)
+  const moviesLocal = useSelector((store) => store.movies.moviesLocal)
 
-  dispatch(updateMovies(movies))
+  useEffect(() => {
+    dispatch(updateMovies(moviesLocal))
+  }, [])
 
   return (
     <>

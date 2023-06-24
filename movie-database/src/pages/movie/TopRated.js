@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
 import ENDPOINTS from '../../utils/constants/endpoints'
 import Hero from '../../components/Hero/Hero'
