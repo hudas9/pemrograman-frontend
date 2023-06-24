@@ -48,7 +48,6 @@ export default function AddMovieForm() {
   function submitMovie() {
     dispatch(addMovie(newMovie))
     navigate('/')
-    console.log(newMovie)
   }
 
   function resetForm() {
