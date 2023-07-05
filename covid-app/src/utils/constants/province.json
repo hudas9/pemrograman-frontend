@@ -1,0 +1,344 @@
+{
+  "provinces": [
+    {
+      "type": "province",
+      "name": "DKI Jakarta",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Jawa Barat",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Jawa Tengah",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Jawa Timur",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Banten",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "DI Yogyakarta",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Kalimantan Timur",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Bali",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Sumatera Utara",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Riau",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Sulawesi Selatan",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Sumatera Barat",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Nusa Tenggara Timur",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Kalimantan Selatan",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Sumatera Selatan",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Lampung",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Kep. Riau",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Kep. Bangka Belitung",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Kalimantan Barat",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Sulawesi Tengah",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Kalimantan Tengah",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Sulawesi Utara",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Papua",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Kalimantan Utara",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Aceh",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Jambi",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Nusa Tenggara Barat",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Papua Barat",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Bengkulu",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Sulawesi Tenggara",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Maluku",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Sulawesi Barat",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Maluku Utara",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    },
+    {
+      "type": "province",
+      "name": "Gorontalo",
+      "numbers": {
+        "confirmed": 0,
+        "recovered": 0,
+        "treatment": 0,
+        "death": 0
+      }
+    }
+  ]
+}
