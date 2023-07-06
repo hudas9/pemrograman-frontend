@@ -68,6 +68,13 @@ const StyledForm = styled.div`
     -moz-appearance: textfield;
   }
 
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+  }
+
   option {
     text-transform: capitalize;
   }
