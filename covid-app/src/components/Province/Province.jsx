@@ -5,6 +5,7 @@ import Table from '../Table/Table'
 
 export default function Province() {
   const provinces = useSelector((state) => state.provinces.provinces)
+
   return (
     <StyledProvince>
       <section>

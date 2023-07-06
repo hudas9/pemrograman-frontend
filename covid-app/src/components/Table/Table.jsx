@@ -1,6 +1,8 @@
 import StyledTable from './Table.styled.js'
 
 export default function Table({ data }) {
+  const sortedData = [...data].sort((a, b) => a.name.localeCompare(b.name))
+
   return (
     <StyledTable>
       <thead>
@@ -14,15 +16,15 @@ export default function Table({ data }) {
         </tr>
       </thead>
       <tbody>
-        {data.map((item, index) => {
+        {sortedData.map((item, index) => {
           return (
             <tr key={index}>
               <td>{index + 1}</td>
               <td>{item.name}</td>
-              <td>{item.numbers.confirmed}</td>
-              <td>{item.numbers.recovered}</td>
-              <td>{item.numbers.treatment}</td>
-              <td>{item.numbers.death}</td>
+              <td>{item.numbers.confirmed.toLocaleString('id-ID')}</td>
+              <td>{item.numbers.recovered.toLocaleString('id-ID')}</td>
+              <td>{item.numbers.treatment.toLocaleString('id-ID')}</td>
+              <td>{item.numbers.death.toLocaleString('id-ID')}</td>
             </tr>
           )
         })}
