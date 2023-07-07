@@ -1,6 +1,6 @@
 import StyledProvince from './Province.styled'
 import { useSelector } from 'react-redux'
-import { Heading, SubHeading } from '../styled'
+import { Heading, SubHeading } from '../styled/ui-components'
 import Table from '../Table/Table'
 
 export default function Province() {

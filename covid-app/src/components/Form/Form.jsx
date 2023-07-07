@@ -4,7 +4,14 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { updateProvinces } from '../../features/provincesSlice'
 import { useSelector } from 'react-redux'
-import { Heading, Alert } from '../styled'
+import {
+  Heading,
+  Alert,
+  Label,
+  Input,
+  Select,
+  Button,
+} from '../styled/ui-components'
 
 export default function Form() {
   const provinces = useSelector((state) => state.provinces.provinces)
@@ -82,8 +89,8 @@ export default function Form() {
           <Heading>Form Covid</Heading>
           <form onSubmit={handleSubmit}>
             <div>
-              <label>Province</label>
-              <select
+              <Label>Province</Label>
+              <Select
                 name="province"
                 value={formData.province}
                 onChange={handleChange}
@@ -96,13 +103,12 @@ export default function Form() {
                     </option>
                   )
                 })}
-              </select>
+              </Select>
               {alert.province && <Alert>*Province must be selected</Alert>}
             </div>
             <div>
-              <label>Status</label>
-              <select
-                className="form__input"
+              <Label>Status</Label>
+              <Select
                 name="status"
                 value={formData.status}
                 onChange={handleChange}
@@ -112,13 +118,12 @@ export default function Form() {
                 <option value="recovered">Recovered</option>
                 <option value="treatment">Treatment</option>
                 <option value="death">Death</option>
-              </select>
+              </Select>
               {alert.status && <Alert>*Status must be selected</Alert>}
             </div>
             <div>
-              <label>Total</label>
-              <input
-                className="form__input"
+              <Label>Total</Label>
+              <Input
                 type="number"
                 name="total"
                 value={formData.total}
@@ -130,12 +135,12 @@ export default function Form() {
                     <Alert>*Total must be filled</Alert>
                   )}
                   {formData.total !== '' && formData.total <= 0 && (
-                    <Alert>*Total must be a Alertositive number</Alert>
+                    <Alert>*Total must be a positive number</Alert>
                   )}
                 </>
               )}
             </div>
-            <button>Submit</button>
+            <Button w="100%">Submit</Button>
           </form>
         </div>
       </section>

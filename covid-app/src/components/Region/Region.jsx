@@ -2,7 +2,7 @@ import StyledRegion from './Region.styled'
 import { useState, useEffect } from 'react'
 import ENDPOINTS from '../../utils/constants/endpoints'
 import axios from 'axios'
-import { Heading, SubHeading } from '../styled'
+import { Heading, SubHeading } from '../styled/ui-components'
 import CardRegion from '../CardRegion/CardRegion'
 
 const Region = () => {

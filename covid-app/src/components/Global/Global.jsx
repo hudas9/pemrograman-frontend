@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import ENDPOINTS from '../../utils/constants/endpoints'
 import axios from 'axios'
 import Card from '../Card/Card'
-import { Heading, SubHeading } from '../styled'
+import { Heading, SubHeading } from '../styled/ui-components'
 
 const Global = () => {
   const [global, setGlobal] = useState([])

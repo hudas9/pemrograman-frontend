@@ -2,7 +2,7 @@ import StyledIndonesia from './Indonesia.styled'
 import ENDPOINTS from '../../utils/constants/endpoints'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Heading, SubHeading } from '../styled'
+import { Heading, SubHeading } from '../styled/ui-components'
 import Card from '../Card/Card'
 
 export default function Indonesia() {

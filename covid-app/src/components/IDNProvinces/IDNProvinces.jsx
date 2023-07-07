@@ -1,5 +1,5 @@
 import StyledIDNProvinces from './IDNProvinces.styled'
-import { Heading, SubHeading } from '../styled'
+import { Heading, SubHeading } from '../styled/ui-components'
 import Table from '../Table/Table'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
